@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
 	                </svg>
 	      </a>
 	      <div className={styles['modal-content']}>
-	        <form action="some_URL_provided_by_mailchimp"
+	        <form action="https://jepras.us14.list-manage.com/subscribe/post?u=671c8542725c29d88f8ea0ec8&amp;id=eb1b287263"
                       method="post"
                       id="mc-embedded-subscribe-form"
                       name="mc-embedded-subscribe-form"
@@ -79,7 +79,7 @@ class IndexPage extends React.Component {
 	            <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
 		      <input type="text"
                              value={this.botInputValue}
-                             name="I_think_some_name_provided_by_mailchimp"
+                             name="b_671c8542725c29d88f8ea0ec8_eb1b287263"
                              tabIndex="-1"
                              onChange={(event) => this.setState({ botInputValue: event.target.value })} />
 	            </div>
