@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/datamanager",
   siteMetadata: {
     title: 'Data Manager',
   },

@@ -24,7 +24,8 @@ class IndexPage extends React.Component {
         <main id={styles.main}>
           <div className={styles.heading}>
             <h1>DATA MANAGER</h1>
-            <h2>A webapp to manage your Facebook data</h2><br/>
+            <h2>A webapp to manage your Facebook data</h2>
+            <Link to="/login/">Test - go to Login page 1</Link><br/>
             <button className={styles['open-modal']}
                     onClick={() => this.setState({ modalActive: true })}>
               Request Invite
@@ -88,7 +89,7 @@ class IndexPage extends React.Component {
 	            </div>
 	          </div>
 	        </form>
-	      </div>
+	      </div>        
             </div>
           </div>
         </main>
