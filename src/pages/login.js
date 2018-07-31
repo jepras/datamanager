@@ -28,7 +28,7 @@ class Login extends React.Component {
     
     window.fbAsyncInit = function() {
         window.FB.init({
-          appId      : config.facebook,
+          appId      : 207358966557597,
           cookie     : true,  // enable cookies to allow the server to access the session
           xfbml      : true,  // parse social plugins on this page
           version    : 'v2.8' // use version 2.1
@@ -45,7 +45,7 @@ class Login extends React.Component {
       window.FB.login(
           function(resp){
               this.statusChangeCallback(resp);
-          }.bind(this),{ scope : 'email,public_profile' });
+          }.bind(this),{ scope : 'email,public_profile,user_birthday,user_likes' });
   }
 
   checkLoginState() {
@@ -66,6 +66,7 @@ class Login extends React.Component {
       if (response.status === 'connected') {
           // Logged into your app and Facebook.
           this.fetchDataFacebook();
+          console.log("Logged in and authenticated");
       } else if (response.status === 'not_authorized') {
           console.log('Import error', 'Authorize app to import data', 'error')
       } else {
@@ -76,7 +77,8 @@ class Login extends React.Component {
   fetchDataFacebook = () => {
       window.FB.api('/me', function(user) {
           document.getElementById('status').innerHTML =
-              'Thanks for logging in, ' + user.name + '!' + ' your id is ' + user.id + ' and your picture ' + user.picture;
+              'Thanks for logging in, ' + user.name + '!' + ' your id is ' + user.id + ' and your mail ' + user.email 
+              + ' and your birthday is: ' + user.user_birthday;
       });
   }
 
