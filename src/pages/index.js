@@ -20,8 +20,12 @@ class IndexPage extends React.Component {
     var modalOverlayClass = this.state.modalActive ? [styles['modal-overlay'], styles.active].join(' ') : styles['modal-overlay'];
     var modalClass = this.state.modalActive ? [styles.modal, styles.active].join(' ') : styles.modal;
     return(
-      <div>
+
         <main id={styles.main}>
+        <div className={styles.outerbanner}>
+        <div className={styles.banner}>
+        {/* Header element */}
+
           <div className={styles.heading}>
             <h1>DATA MANAGER</h1>
             <h2>A webapp to manage your Facebook data</h2>
@@ -34,6 +38,9 @@ class IndexPage extends React.Component {
               Request Invite
             </button>
           </div>
+
+        {/* Popup box */}
+
           <div className={modalOverlayClass}>
             <div className={modalClass}>
               <a className={styles['close-modal']} onClick={() => this.setState({ modalActive: false })}>
@@ -92,15 +99,93 @@ class IndexPage extends React.Component {
 	            </div>
 	          </div>
 	        </form>
-	      </div>        
-            </div>
-          </div>
-        </main>
+	      </div>
+        </div>
+        </div>
+
+        {/* End of popup box */}
+        </div>
+        </div>  
+        
+
+        {/* Footer */}
+
+        
         <footer>
           <small>COMING SOON</small>
           <small>INVITATION ONLY</small>
         </footer>
-      </div>
+
+        {/* Start of page content */}
+
+        <div className={styles.pagecontent}>
+          <div className={styles.scroll}>
+          <a href="#Scroll" className={styles.scrolldownicon}><img src="https://uploads-ssl.webflow.com/5b5b5c9ebbcd2f5203888b86/5b5b5c9ebbcd2f8057888bc2_icons8-down-arrow-100.png" width="30" /></a>
+          </div>  
+            {/* Features element */}
+
+        <div className={styles.pagecontainer}>
+          <div className={styles.titlewrapper}>
+            <h1>Take ownership of your data</h1> 
+          <div className={styles.headerparagraph}>
+            <h4>See the surprising data they have and delete</h4>
+          </div>
+          </div>
+          <div className={styles.columns}>
+            <div className={styles.colone}>hey</div>
+
+            <div className={styles.coltwo}>hey</div>
+
+            <div className={styles.colthree}>hey</div>
+
+            <div className={styles.clear}></div>
+          </div>
+        </div>
+
+        {/* How it works */}
+
+        <div className={styles.pagecontainerspecial}>
+          <div className={styles.titlewrapper}>
+            <h1>Another element</h1> 
+          <div className={styles.headerparagraph}>
+            <h4>And some text</h4>
+          </div>
+          </div>
+          <div className={styles.columns}>
+            <div className={styles.colone}>hey</div>
+
+            <div className={styles.coltwo}>hey</div>
+
+            <div className={styles.colthree}>hey</div>
+
+            <div className={styles.clear}></div>
+          </div>
+        </div>
+
+        {/* Another element */}
+
+        <div className={styles.pagecontainer}>
+          <div className={styles.titlewrapper}>
+            <h1>Another element</h1> 
+          <div className={styles.headerparagraph}>
+            <h4>and some text</h4>
+          </div>
+          </div>
+          <div className={styles.columns}>
+            <div className={styles.colone}>hey</div>
+
+            <div className={styles.coltwo}>hey</div>
+
+            <div className={styles.colthree}>hey</div>
+
+            <div className={styles.clear}></div>
+          </div>
+        </div>
+
+        </div>
+        {/* End of page content */}
+
+        </main>
     )
   }
 }

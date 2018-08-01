@@ -90,7 +90,6 @@ class Login extends React.Component {
   
   render() {
     return(
-      <div>
         <main id={styles.main}>
           <div className={styles.heading}>
             <h2>Unlock the mysteries of what Facebook knows about you!</h2>
@@ -102,8 +101,8 @@ class Login extends React.Component {
             <br/><br/><Link to="/">Go back to the homepage</Link>
           </div>
           <div id="status"></div>
+          <div><p>hej med dig </p></div>
         </main>
-      </div>
     )
   }
 }
