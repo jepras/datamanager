@@ -128,59 +128,77 @@ class IndexPage extends React.Component {
           <div className={styles.titlewrapper}>
             <h1>Take ownership of your data</h1> 
           <div className={styles.headerparagraph}>
-            <h4>See the surprising data they have and delete</h4>
-          </div>
-          </div>
-          <div className={styles.columns}>
-            <div className={styles.colone}>hey</div>
+            <h4>See the surprising data they have and delete it</h4>
+          </div></div>
 
-            <div className={styles.coltwo}>hey</div>
-
-            <div className={styles.colthree}>hey</div>
-
-            <div className={styles.clear}></div>
+        <div className={[styles.section, styles.group].join(' ')}>
+          <div className={[styles.col, styles.span_1_of_3].join(' ')}>
+            <div><img src="https://previews.dropbox.com/p/thumb/AAJ1QY-XezGqfxG9OCNG-LUJtm1L4DM3WJTaOTxLSzEvvkjxSwGR_ixYtHc153nq4OZuLxBeWXlrzu5T8wBV7mQDQPbrxELRAV86QJmSYs02N4pVoRk_OEX3TT3zV5ARnpspN2kuuFHOXuOM_R4yzID6ELckdscoxDjyLkFu2X44b1UsJjXijPXEICHlI8-qlrNVfzJL-mKX-yTCqSQNxwBu5qhDhUa74oAeQgv2BiJI3w/p.png?size=2048x1536&size_mode=3" 
+                      className={styles.cardpic} /></div>
+            <div className={styles.cardcontent}>
+              <h3 className={styles.cardhead}>Advertisors with your data</h3>
+              <p>You know that companies can buy your information through other services? 
+                More than 80% of advertisors we found are usually unknown to the user</p>
+              <div className={styles.cardbutton}><button className={styles.buttonsmall}>Learn more</button></div>
+            </div>
           </div>
+          <div className={[styles.col, styles.span_1_of_3].join(' ')}>
+            <div><img src="https://previews.dropbox.com/p/thumb/AALm5NrHsW5jdb1u4G2FVubpjUFp3HL2nnZiquFNDCGEg8NAcjYg3FVzJuOOobKPGSpLx4RLkEngjD5i8nd08PNUBTaMorZ8Luw2Kekb_tnfrUjWjnydLnkU23BVFTk6e7e_EeyPp6WidCpE-VmmbrNaZZPozxfGczLnKOj0zndRjXNMUjJFI6cCQlGHjdiFyu_EiX2NTja4t4rmVxdiSAbE4zCJ_R6WJYKYAltGqpzwzQ/p.png?size=2048x1536&size_mode=3" 
+                      className={styles.cardpic} /></div>
+            <div className={styles.cardcontent}>
+              <h3 className={styles.cardhead}>Permissions to apps</h3>
+              <p>We tend not to review the permissions we give to apps when we are in a hurry. 
+                Sometimes they have much more access than they need. 
+              </p>
+              <div className={styles.cardbutton}><button className={styles.buttonsmall}>Learn more</button></div>
+            </div>
+          </div>
+          <div className={[styles.col, styles.span_1_of_3].join(' ')}>
+            <div><img src="https://previews.dropbox.com/p/thumb/AAIghSL_Rk-yzl621KPRl6wTke6APzAYqsraWwI65p-hXf5CFKAWrkMwrQth9iVnXpt6jWLBEqAmAC4_cdH0RTdXBGkt_B8qO_h8Ko8_CBqz09-92jUn1gTIuT0FJcFK6KfFDvUb2Tj9Y3nm3hLF3OH95iUg8Sc9aguI23VHqa177jnwMSLRIg7Tuhnd07VPsHfnAi4FMiE92VsO-89Dmz4k9of73a0nOKAWTV7o2P-BuA/p.png?size=2048x1536&size_mode=3" 
+                      className={styles.cardpic} /></div>
+            <div className={styles.cardcontent}>
+              <h3 className={styles.cardhead}>Your category</h3>
+              <p>Based on your profile, where you logged in, what you have clicked & many more data points, companies categorize their users. 
+                Are you interested in yours?</p>
+              <div className={styles.cardbutton}><button className={styles.buttonsmall}>Learn more</button></div>
+            </div>
+          </div>
+        </div>
+
         </div>
 
         {/* How it works */}
 
         <div className={styles.pagecontainerspecial}>
           <div className={styles.titlewrapper}>
-            <h1>Another element</h1> 
+            <h1>Dashboard view</h1> 
           <div className={styles.headerparagraph}>
-            <h4>And some text</h4>
+            <h4>Login and see it quickly for yourself!</h4>
           </div>
           </div>
-          <div className={styles.columns}>
-            <div className={styles.colone}>hey</div>
+          <div><img src="https://previews.dropbox.com/p/thumb/AAJ9Tx1yOmO1g8a3umazO9IEytqjf69Ctwz1BmXXKKnNfk9N3AgRPHfrtGuLQZ03h1mBuv1T1MPxlHU1tJ60drO7cXxNGzDyOvRZljNk_18JSV3IF8O-iEFnf9tNoVGlpHelNyKOnYGwSkFn4OJqcw4jx9eva0lazwWYZG2QDDQu9FlKwziKj2hf9HgnuHVC7xhS1R1_ss8_gyavicDFyCq8WYusrj57wU8OKdHHewsuEg/p.png?size=2048x1536&size_mode=3" 
+                                                className={styles.demopic} /></div>
 
-            <div className={styles.coltwo}>hey</div>
-
-            <div className={styles.colthree}>hey</div>
-
-            <div className={styles.clear}></div>
-          </div>
         </div>
 
         {/* Another element */}
 
+        
+
+        </div>
         <div className={styles.pagecontainer}>
           <div className={styles.titlewrapper}>
-            <h1>Another element</h1> 
+            <h1>Disclaimer</h1> 
           <div className={styles.headerparagraph}>
-            <h4>and some text</h4>
+            <h4 className={styles.headerparagraph}>We are not saving and taking advantage of your data. <br/>
+              We are just 2 dudes creating an interface that channels all the information from your profiles.<br/>
+              Instead of hiding it faraway as some companies tend to do .. </h4>
           </div>
+            <button className={styles['open-modal']}
+                    onClick={() => this.setState({ modalActive: true })}>
+              Request Invite
+            </button>
           </div>
-          <div className={styles.columns}>
-            <div className={styles.colone}>hey</div>
-
-            <div className={styles.coltwo}>hey</div>
-
-            <div className={styles.colthree}>hey</div>
-
-            <div className={styles.clear}></div>
-          </div>
-        </div>
 
         </div>
         {/* End of page content */}

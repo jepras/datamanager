@@ -122,10 +122,9 @@ h2 {
 }
 
 .pagecontent {
-  height:100vh;
   /* background-image: radial-gradient(circle farthest-corner at 50% 50%, #22b797 46%, #15909f); */
-  background-color: #22b797;
-  padding:40px;
+  background-color: #d0ccd0;
+  padding: 3%;
   min-width:80vw;
 }
 
@@ -139,10 +138,10 @@ h2 {
 
 .pagecontainerspecial {
   display:block;
-  background-color: #22b797;
+  background-color: #d0ccd0;
   margin-right: auto;
   margin-left: auto;
-  padding: 3%;
+  padding-top: 2%;
 }
 
 .titlewrapper {
@@ -158,9 +157,10 @@ h2 {
 }
 
 .colone, .coltwo, .colthree {
-    width: 30vw;
+    width: 33vw;
     float: left;
-    margin: 5%;
+    margin-top: 5%;
+    padding: 5%;
 }
 
 .colthree {
@@ -171,6 +171,61 @@ h2 {
   clear: both;
 }
 
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+.cardpic {
+  align-content: center;
+  display: block; 
+  max-width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5%;
+}
+
+.cardcontent {
+  text-align: center;
+}
+
+.cardhead {
+  margin-bottom: 5%;
+}
+
+.demopic {
+  align-content: center;
+  display: block; 
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /* Rest */
 
@@ -224,6 +279,26 @@ button:hover {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
 button:focus {
+  outline: none;
+}
+
+.buttonsmall {
+  background-color: #d0ccd0;
+  margin-top: 15px;
+  position: relative;
+  color: #fff;
+  border: none;
+  padding: 0.25em 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.buttonsmall:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+.buttonsmall:focus {
   outline: none;
 }
 
