@@ -227,6 +227,76 @@ h2 {
   margin-left: auto;
 }
 
+/* Navbar */
+.navpic {
+  max-width: 10vh
+}
+
+.anav {
+  background-image: none !important;
+}
+
+.anavitem {
+  padding-top: 1rem;
+  padding-right: 1rem !important;
+  background-image: none !important;
+}
+
+/* Big section */
+.bigsection {
+  position: relative;
+  background-color: rgb(208, 204, 208);
+}
+
+.sectioncontain {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 35px;
+}
+
+.menuleft {
+  padding-top: 25px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: white;
+  background-image: url(https://uploads-ssl.webflow.com/5b674b7…/5b674b7…_bookmark-tag.png);
+  background-size: 20px;
+  box-shadow: rgba(160, 160, 160, 0.95) 0px 0px 17px -5px;
+  background-position: 91% 0px;
+  background-repeat: no-repeat;
+}
+
+.inforight {
+  width: 72%;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.topdashbar {
+  display: flex;
+  margin-right: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  box-shadow: rgba(160, 160, 160, 0.19) 0px 0px 12px 0px;
+}
+
+
 /* Rest */
 
 .heading {
