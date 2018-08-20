@@ -2,6 +2,12 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import styles from "./index.module.css";
+import ads from '../img/ads.png'
+import network from '../img/network.png'
+import search from '../img/search.png'
+import demogrey from '../img/demogrey.png'
+import arrowdown from '../img/arrowdown.png'
+
 
 /* const IndexPage = () => (*/
 class IndexPage extends React.Component {
@@ -20,8 +26,12 @@ class IndexPage extends React.Component {
     var modalOverlayClass = this.state.modalActive ? [styles['modal-overlay'], styles.active].join(' ') : styles['modal-overlay'];
     var modalClass = this.state.modalActive ? [styles.modal, styles.active].join(' ') : styles.modal;
     return(
-      <div>
+
         <main id={styles.main}>
+        <div className={styles.outerbanner}>
+        <div className={styles.banner}>
+        {/* Header element */}
+
           <div className={styles.heading}>
             <h1>DATA MANAGER</h1>
             <h2>A webapp to manage your Facebook data</h2>
@@ -34,6 +44,9 @@ class IndexPage extends React.Component {
               Request Invite
             </button>
           </div>
+
+        {/* Popup box */}
+
           <div className={modalOverlayClass}>
             <div className={modalClass}>
               <a className={styles['close-modal']} onClick={() => this.setState({ modalActive: false })}>
@@ -92,15 +105,110 @@ class IndexPage extends React.Component {
 	            </div>
 	          </div>
 	        </form>
-	      </div>        
-            </div>
-          </div>
-        </main>
+	      </div>
+        </div>
+        </div>
+
+        {/* End of popup box */}
+        </div>
+        </div>  
+        
+
+        {/* Footer */}
+
+        
         <footer>
           <small>COMING SOON</small>
           <small>INVITATION ONLY</small>
         </footer>
-      </div>
+
+        {/* Start of page content */}
+
+        <div className={styles.pagecontent}>
+          <div className={styles.scroll}>
+          <a href="#Scroll" className={styles.scrolldownicon}><img src={arrowdown} width="30" /></a>
+          </div>  
+            {/* Features element */}
+
+        <div className={styles.pagecontainer}>
+          <div className={styles.titlewrapper}>
+            <h1>Take ownership of your data</h1> 
+          <div className={styles.headerparagraph}>
+            <h4>See the surprising data they have and delete it</h4>
+          </div></div>
+
+        <div className={[styles.section, styles.group].join(' ')}>
+          <div className={[styles.col, styles.span_1_of_3].join(' ')}>
+            <div><img src={ads} 
+                      className={styles.cardpic} /></div>
+            <div className={styles.cardcontent}>
+              <h3 className={styles.cardhead}>Advertisors with your data</h3>
+              <p>You know that companies can buy your information through other services? 
+                More than 80% of advertisors we found are usually unknown to the user</p>
+              <div className={styles.cardbutton}><button className={styles.buttonsmall}>Learn more</button></div>
+            </div>
+          </div>
+          <div className={[styles.col, styles.span_1_of_3].join(' ')}>
+            <div><img src={network} 
+                      className={styles.cardpic} /></div>
+            <div className={styles.cardcontent}>
+              <h3 className={styles.cardhead}>Permissions to apps</h3>
+              <p>We tend not to review the permissions we give to apps when we are in a hurry. 
+                Sometimes they have much more access than they need. 
+              </p>
+              <div className={styles.cardbutton}><button className={styles.buttonsmall}>Learn more</button></div>
+            </div>
+          </div>
+          <div className={[styles.col, styles.span_1_of_3].join(' ')}>
+            <div><img src={search} 
+                      className={styles.cardpic} /></div>
+            <div className={styles.cardcontent}>
+              <h3 className={styles.cardhead}>Your category</h3>
+              <p>Based on your profile, where you logged in, what you have clicked & many more data points, companies categorize their users. 
+                Are you interested in yours?</p>
+              <div className={styles.cardbutton}><button className={styles.buttonsmall}>Learn more</button></div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+        {/* How it works */}
+
+        <div className={styles.pagecontainerspecial}>
+          <div className={styles.titlewrapper}>
+            <h1>Dashboard view</h1> 
+          <div className={styles.headerparagraph}>
+            <h4>Login and see it quickly for yourself!</h4>
+          </div>
+          </div>
+          <div><img src={demogrey} className={styles.demopic} /></div>
+
+        </div>
+
+        {/* Another element */}
+
+        
+
+        </div>
+        <div className={styles.pagecontainer}>
+          <div className={styles.titlewrapper}>
+            <h1>Disclaimer</h1> 
+          <div className={styles.headerparagraph}>
+            <h4 className={styles.headerparagraph}>We are not saving and taking advantage of your data. <br/>
+              We are just 2 dudes creating an interface that channels all the information from your profiles.<br/>
+              Instead of hiding it faraway as some companies tend to do .. </h4>
+          </div>
+            <button className={styles['open-modal']}
+                    onClick={() => this.setState({ modalActive: true })}>
+              Request Invite
+            </button>
+          </div>
+
+        </div>
+        {/* End of page content */}
+
+        </main>
     )
   }
 }

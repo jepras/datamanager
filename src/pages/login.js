@@ -22,7 +22,7 @@ class Login extends React.Component {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=207358966557597&autoLogAppEvents=1';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     
@@ -75,12 +75,36 @@ class Login extends React.Component {
   }
 
   fetchDataFacebook = () => {
-      window.FB.api('/me', function(user) {
-          document.getElementById('status').innerHTML =
-              'Thanks for logging in, ' + user.name + '!' + ' your id is ' + user.id + ' and your mail ' + user.email 
-              + ' and your birthday is: ' + user.user_birthday;
-      });
-  }
+      window.FB.api('/me?fields=name,email,birthday,location', function(user) {
+        const JSX = function() {
+            <div>
+              <h1>Hello World</h1>
+              <p>Lets render this to the DOM</p>
+            </div>
+          };
+        document.getElementById('status').innerHTML = JSX +
+             'Thanks for logging in, ' + user.name + '!' + ' your id is ' + user.id + ' and your mail ' + user.email 
+              + ' and your birthday is: ' + user.user_birthday; 
+      })}
+
+       /*  '<h3>' + user.name + '</h3>' +
+        '<ul>' +
+            '<li>' + user.email + '</li>'
+        '</ul>'; */
+      /*   if (user) {
+            this.buildProfile();
+        }
+        
+      buildProfile = () => {
+        let profile = '<h3>' + user.name + '</h3>';
+        document.getElementById('trying').innerHTML = profile;
+      }}) */
+    /* } */
+
+/*   buildProfile(user) {
+      let profile = '<h3>' + user.name + '</h3>';
+      document.getElementById('trying').innerHTML = profile;
+  } */
 
   logout() {
       fb.logout(function(response) {
@@ -90,8 +114,8 @@ class Login extends React.Component {
   
   render() {
     return(
-      <div>
         <main id={styles.main}>
+        <div className={styles.banner}>
           <div className={styles.heading}>
             <h2>Unlock the mysteries of what Facebook knows about you!</h2>
             
@@ -100,10 +124,13 @@ class Login extends React.Component {
                     Login with Facebook
                     </button>
             <br/><br/><Link to="/">Go back to the homepage</Link>
+          <br />
+          <div className="styles.info" id="status"></div>
+          <div><p>Next</p></div>
+          <div id="trying"></div>
           </div>
-          <div id="status"></div>
+        </div>
         </main>
-      </div>
     )
   }
 }
