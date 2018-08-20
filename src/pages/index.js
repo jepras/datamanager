@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import styles from "./index.module.css";
+
+/* Adds pictures with {name} in img src="" */
 import ads from '../img/ads.png'
 import network from '../img/network.png'
 import search from '../img/search.png'
@@ -9,10 +11,11 @@ import demogrey from '../img/demogrey.png'
 import arrowdown from '../img/arrowdown.png'
 
 
-/* const IndexPage = () => (*/
+/* Create Index Page */
 class IndexPage extends React.Component {
   constructor() {
     super();
+    /* State references for request invite popup */
     this.state = {
       modalActive: false,
       emailValue: '',
@@ -23,21 +26,21 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    /* Raul to add comments */
     var modalOverlayClass = this.state.modalActive ? [styles['modal-overlay'], styles.active].join(' ') : styles['modal-overlay'];
     var modalClass = this.state.modalActive ? [styles.modal, styles.active].join(' ') : styles.modal;
+    
     return(
-
         <main id={styles.main}>
-        <div className={styles.outerbanner}>
-        <div className={styles.banner}>
-        {/* Header element */}
+        <div>
 
+          {/* Div for top element */}
+        <div className={styles.banner}>
+        
+        {/* Header element */}
           <div className={styles.heading}>
             <h1>DATA MANAGER</h1>
             <h2>A webapp to manage your Facebook data</h2>
-            <div style={{display: 'none'}}>
-              <Link to="/login/">Test - go to Login page 1</Link>
-            </div>
             <br/>
             <button className={styles['open-modal']}
                     onClick={() => this.setState({ modalActive: true })}>
@@ -110,12 +113,11 @@ class IndexPage extends React.Component {
         </div>
 
         {/* End of popup box */}
+
         </div>
         </div>  
         
-
         {/* Footer */}
-
         
         <footer>
           <small>COMING SOON</small>
@@ -127,9 +129,11 @@ class IndexPage extends React.Component {
         <div className={styles.pagecontent}>
           <div className={styles.scroll}>
           <a href="#Scroll" className={styles.scrolldownicon}><img src={arrowdown} width="30" /></a>
-          </div>  
-            {/* Features element */}
+          </div> 
 
+        {/* Features element */}
+
+        {/* Headline page content */}
         <div className={styles.pagecontainer}>
           <div className={styles.titlewrapper}>
             <h1>Take ownership of your data</h1> 
@@ -137,7 +141,8 @@ class IndexPage extends React.Component {
             <h4>See the surprising data they have and delete it</h4>
           </div></div>
 
-        <div className={[styles.section, styles.group].join(' ')}>
+        {/* Cards in feature element */}
+        <div className={[styles.section, styles.group].join(' ')}> {/* .join(' ') is to add multiple className's */}
           <div className={[styles.col, styles.span_1_of_3].join(' ')}>
             <div><img src={ads} 
                       className={styles.cardpic} /></div>
@@ -182,13 +187,11 @@ class IndexPage extends React.Component {
             <h4>Login and see it quickly for yourself!</h4>
           </div>
           </div>
-          <div><img src={demogrey} className={styles.demopic} /></div>
+          <div><img src={demogrey} className={styles.demopic} /></div> {/* example of how to add pictures */}
 
         </div>
 
-        {/* Another element */}
-
-        
+        {/* Disclaimer element */}
 
         </div>
         <div className={styles.pagecontainer}>
@@ -206,6 +209,7 @@ class IndexPage extends React.Component {
           </div>
 
         </div>
+        
         {/* End of page content */}
 
         </main>

@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import meetings from '../img/meetings.png'
 
+/* Have used reactstrap to create Bootstrap navbar */
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 
 
@@ -19,6 +20,8 @@ export default class Overview extends React.Component {
     render() {
         return (
                 <div id='status'>
+
+                {/* Attempt to recreate webflow dashboard view, with no real fb data yet */}
                 <div>
                         <h4>Overview of your data</h4>
                     </div>
@@ -66,6 +69,8 @@ export default class Overview extends React.Component {
                         <Col xs="4"><div className={styles.dashcardcontain}>hej</div></Col>
                     </Row>
                     <div>
+
+                    {/* Real information fetched from facebook */}
                     <ListGroup>
                         <ListGroupItem>Name: {this.props.name}</ListGroupItem>
                         <ListGroupItem>Email: {this.props.email}</ListGroupItem>

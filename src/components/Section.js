@@ -20,6 +20,7 @@ export default class Section extends React.Component {
         };
     }
 
+    /* For Navbar dropdown, can probably be deleted here - NEEDS INVESTIGATION */
     toggle() {
         this.setState({
         isOpen: !this.state.isOpen
@@ -32,10 +33,14 @@ export default class Section extends React.Component {
             <div className={styles.sectioncontain}>
                 <Row>
                     <Col xs="3" className={styles.menuleft}>
+
+                        {/* Sidebar component created further down */}
                         <Sidebar firstname={this.props.firstname} 
                                  name={this.props.name}/>
                     </Col>
                     <Col xs="9" className={styles.inforight}>
+
+                        {/* Info component created further down */}
                         <Info name={this.props.name}
                             birthday={this.props.birthday}
                             location={this.props.location}
@@ -138,6 +143,8 @@ class Info extends React.Component {
     render() {
         return (
             <div>
+
+                {/* Renders overview that is created as a seperate component */}
                 <Overview name={this.props.name}
                             birthday={this.props.birthday}
                             location={this.props.location}
