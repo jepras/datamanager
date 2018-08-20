@@ -2,6 +2,12 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import styles from "./index.module.css";
+import ads from '../img/ads.png'
+import network from '../img/network.png'
+import search from '../img/search.png'
+import demogrey from '../img/demogrey.png'
+import arrowdown from '../img/arrowdown.png'
+
 
 /* const IndexPage = () => (*/
 class IndexPage extends React.Component {
@@ -120,7 +126,7 @@ class IndexPage extends React.Component {
 
         <div className={styles.pagecontent}>
           <div className={styles.scroll}>
-          <a href="#Scroll" className={styles.scrolldownicon}><img src="https://uploads-ssl.webflow.com/5b5b5c9ebbcd2f5203888b86/5b5b5c9ebbcd2f8057888bc2_icons8-down-arrow-100.png" width="30" /></a>
+          <a href="#Scroll" className={styles.scrolldownicon}><img src={arrowdown} width="30" /></a>
           </div>  
             {/* Features element */}
 
@@ -133,7 +139,7 @@ class IndexPage extends React.Component {
 
         <div className={[styles.section, styles.group].join(' ')}>
           <div className={[styles.col, styles.span_1_of_3].join(' ')}>
-            <div><img src="https://previews.dropbox.com/p/thumb/AAJ1QY-XezGqfxG9OCNG-LUJtm1L4DM3WJTaOTxLSzEvvkjxSwGR_ixYtHc153nq4OZuLxBeWXlrzu5T8wBV7mQDQPbrxELRAV86QJmSYs02N4pVoRk_OEX3TT3zV5ARnpspN2kuuFHOXuOM_R4yzID6ELckdscoxDjyLkFu2X44b1UsJjXijPXEICHlI8-qlrNVfzJL-mKX-yTCqSQNxwBu5qhDhUa74oAeQgv2BiJI3w/p.png?size=2048x1536&size_mode=3" 
+            <div><img src={ads} 
                       className={styles.cardpic} /></div>
             <div className={styles.cardcontent}>
               <h3 className={styles.cardhead}>Advertisors with your data</h3>
@@ -143,7 +149,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
           <div className={[styles.col, styles.span_1_of_3].join(' ')}>
-            <div><img src="https://previews.dropbox.com/p/thumb/AALm5NrHsW5jdb1u4G2FVubpjUFp3HL2nnZiquFNDCGEg8NAcjYg3FVzJuOOobKPGSpLx4RLkEngjD5i8nd08PNUBTaMorZ8Luw2Kekb_tnfrUjWjnydLnkU23BVFTk6e7e_EeyPp6WidCpE-VmmbrNaZZPozxfGczLnKOj0zndRjXNMUjJFI6cCQlGHjdiFyu_EiX2NTja4t4rmVxdiSAbE4zCJ_R6WJYKYAltGqpzwzQ/p.png?size=2048x1536&size_mode=3" 
+            <div><img src={network} 
                       className={styles.cardpic} /></div>
             <div className={styles.cardcontent}>
               <h3 className={styles.cardhead}>Permissions to apps</h3>
@@ -154,7 +160,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
           <div className={[styles.col, styles.span_1_of_3].join(' ')}>
-            <div><img src="https://previews.dropbox.com/p/thumb/AAIghSL_Rk-yzl621KPRl6wTke6APzAYqsraWwI65p-hXf5CFKAWrkMwrQth9iVnXpt6jWLBEqAmAC4_cdH0RTdXBGkt_B8qO_h8Ko8_CBqz09-92jUn1gTIuT0FJcFK6KfFDvUb2Tj9Y3nm3hLF3OH95iUg8Sc9aguI23VHqa177jnwMSLRIg7Tuhnd07VPsHfnAi4FMiE92VsO-89Dmz4k9of73a0nOKAWTV7o2P-BuA/p.png?size=2048x1536&size_mode=3" 
+            <div><img src={search} 
                       className={styles.cardpic} /></div>
             <div className={styles.cardcontent}>
               <h3 className={styles.cardhead}>Your category</h3>
@@ -176,8 +182,7 @@ class IndexPage extends React.Component {
             <h4>Login and see it quickly for yourself!</h4>
           </div>
           </div>
-          <div><img src="https://previews.dropbox.com/p/thumb/AAJ9Tx1yOmO1g8a3umazO9IEytqjf69Ctwz1BmXXKKnNfk9N3AgRPHfrtGuLQZ03h1mBuv1T1MPxlHU1tJ60drO7cXxNGzDyOvRZljNk_18JSV3IF8O-iEFnf9tNoVGlpHelNyKOnYGwSkFn4OJqcw4jx9eva0lazwWYZG2QDDQu9FlKwziKj2hf9HgnuHVC7xhS1R1_ss8_gyavicDFyCq8WYusrj57wU8OKdHHewsuEg/p.png?size=2048x1536&size_mode=3" 
-                                                className={styles.demopic} /></div>
+          <div><img src={demogrey} className={styles.demopic} /></div>
 
         </div>
 

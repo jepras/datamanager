@@ -8,7 +8,11 @@ import ReactNavbar from '../components/ReactNavbar'
 import Section from '../components/Section'
 import { Container, Row, Col } from 'reactstrap';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel, faBullseye, faUserFriends, faMapMarkedAlt, faTabletAlt, faEnvelopeOpen, faUserCircle, faPowerOff, faTachometerAlt } from '@fortawesome/free-solid-svg-icons'
 
+library.add(faStroopwafel, faBullseye, faUserFriends, faMapMarkedAlt, faTabletAlt, faEnvelopeOpen, faUserCircle, faPowerOff, faTachometerAlt)
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -17,21 +21,23 @@ class Dashboard extends React.Component {
           name: '',
           birthday: '',
           location: '',
-          email: ''
+          email: '',
+          firstname: ''
       };
       this.buildAdPage = this.buildAdPage.bind(this);
       this.checkLoginState = this.checkLoginState.bind(this);
       this.logout = this.logout.bind(this);
-    }
+    }    
 
     buildAdPage(response) {
         this.setState({
             name: response.name,
             birthday: response.birthday,
             location: response.location,
-            email: response.email
+            email: response.email,
+            firstname: response.first_name
         });
-        console.log("set state to " + this.state.name)
+        console.log("set state to " + this.state.firstname);
     }
 
      // This is called with the results from from FB.getLoginStatus().
@@ -105,7 +111,7 @@ class Dashboard extends React.Component {
   // successful.  See statusChangeCallback() for when this call is made.
   testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('me?fields=id,name,email,location,birthday', function(response) {
+    FB.api('me?fields=id,name,email,location,birthday,first_name', function(response) {
       console.log('Successful login for: ' + response.name);
       this.buildAdPage(response);
       /* document.getElementById('status').innerHTML =
@@ -123,7 +129,7 @@ class Dashboard extends React.Component {
       document.getElementById('notlogged').style.display = 'none';
     } else {
       document.getElementById('logout').style.display = 'none';
-      document.getElementById('profile').style.display = 'none';
+      document.getElementById('status').style.display = 'none';
       document.getElementById('login').style.display = 'block';
       document.getElementById('notlogged').style.display = 'block';
         }
@@ -142,19 +148,12 @@ class Dashboard extends React.Component {
                 <Section name={this.state.name}
                          birthday={this.state.birthday}
                          location={this.state.location}
-                         email={this.state.email} />
-                <Footer />
+                         email={this.state.email}
+                         firstname={this.state.firstname} />
             </div>
         )
     }
 }
 
-const Footer = () => {
-    return (
-        <div>
-            <p>Footer</p>
-        </div>
-    )
-}
 
 export default Dashboard

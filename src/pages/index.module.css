@@ -62,10 +62,8 @@ body {
   display:-webkit-flex;
   display:-ms-flexbox;
   -webkit-box-pack:center;
-  -webkit-justify-content:center;
   -ms-flex-pack:center;
   -webkit-box-align:center;
-  -webkit-align-items:center;
   -ms-flex-align:center;
 /*   justify-content:center;
   align-items:center; */
@@ -229,7 +227,7 @@ h2 {
 
 /* Navbar */
 .navpic {
-  max-width: 10vh
+  max-width: 40px
 }
 
 .anav {
@@ -246,6 +244,7 @@ h2 {
 .bigsection {
   position: relative;
   background-color: rgb(208, 204, 208);
+  min-height: 100vh;
 }
 
 .sectioncontain {
@@ -259,6 +258,7 @@ h2 {
 
 .menuleft {
   padding-top: 25px;
+  padding-bottom: 25px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -282,7 +282,7 @@ h2 {
 
 .topdashbar {
   display: flex;
-  margin-right: 15px;
+  margin-top: 15px;
   padding-top: 15px;
   padding-right: 15px;
   padding-bottom: 15px;
@@ -295,6 +295,139 @@ h2 {
   background-color: white;
   box-shadow: rgba(160, 160, 160, 0.19) 0px 0px 12px 0px;
 }
+
+.leftmenulink, .leftlogout {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: white;
+  color: #a0a0a0;
+}
+
+.leftlogout {
+  margin-top: 50px;
+}
+
+.leftmenulink:hover, .leftmenulink.-wfp-hover, .leftlogout:hover, .leftlogout.-wfp-hover {
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: #2290ff;
+  background-color: #f5faff;
+  color: #2290ff;
+}
+
+.sideicon {
+  width: 16.66666667%;
+  justify-content: center;
+  display: flex;
+}
+
+.sidetext {
+  width: 66.66666667%;
+  padding-left: 5%;
+}
+
+
+
+.menuheader {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.menuheadertext {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.full {
+  width: 100%;
+}
+
+.topdashimagecont {
+  width: 70px;
+  height: 70px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #f6f6f6;
+}
+
+.topdashimage {
+  transform: translateY(15%);
+}
+
+.topdashstat {
+  display: block;
+  margin-top: 7px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.topdashnumber {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.topdashtext {
+  margin-left: 10px;
+  transform: translate(0px, -5px);
+  color: #a0a0a0;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.stathold {
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #f6f6f6;
+}
+
+.infomidtext {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.dashcardcontain {
+  width: 100%;
+  margin-bottom: 5px;
+  float: left;
+  margin-right: 5px;
+  margin-left: 0px;
+  padding: 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: white;
+}
+
+.dashcardpic {
+  align-content: center;
+  display: block;
+  max-width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5%;
+}
+
+.dashcardhead {
+  margin-bottom: 5%;
+}
+
+.dashcardcontent {
+  text-align: center;
+}
+
 
 
 /* Rest */
